@@ -10,6 +10,7 @@ images in background folder not supplied.
 - waybar
 - swayidle
 - swaylock
+- zsh (oh-my-zsh)
 - swww
 - kitty
 - dunst
