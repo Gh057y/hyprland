@@ -1,0 +1,84 @@
+{
+  "layer": "top",
+    "modules-left": ["custom/arch", "hyprland/workspaces"],
+    "modules-center": ["hyprland/window"],
+    "modules-right": ["clock", "cpu", "memory", "disk", "backlight", "pulseaudio", "bluetooth", "network", "battery"],
+    "custom/arch": {
+      "format": "<span font='12'>blubb</span>",
+      "tooltip": false,
+      "on-click": "sh $HOME/.config/rofi/bin/powermenu"
+    },
+    "hyprland/workspaces": {
+      "format": "{name}",
+      "format": "<span font='12'>{icon}</span>",
+      "tooltip": false,
+      "all-outputs": true,
+      "format-icons": {
+        "active": "",
+        "default": ""
+      }
+    },
+    "hyprland/window": {
+    // "format": "{}", //
+    "format": "<span font='10' color='#d03e3e'>{}</span>",
+    },
+    "clock": {
+      "format": "<span color='#d03e3e'> </span>{:%H:%M}",
+    },
+    "memory": {
+	"interval": 30,
+	"format": "{used:0.1f}G/{total:0.1f}G "
+    },
+    // SINGLE CPU VIEW (OVERALL) //
+   // "cpu": { //
+//	"interval": 10,//
+//	"format": "{}% ", //
+//	"max-length": 10 //
+//    },
+    // PER CORE VIEW (4 CORES) //
+    "cpu": {
+	"interval": 1,
+	"format": "{icon0}{icon1}{icon2}{icon3} {usage:>2}% ",
+	"format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
+    },
+    "disk": {
+	"interval": 30,
+	"format": "{free} free on {path}",
+    },
+    "backlight": {
+      "device": "intel_backlight",
+      "format": "<span color='#d03e3e'>{icon}</span> {percent}%",
+      "format-icons": ["", "", "", "", "", "", "", "", ""]
+    },
+    "pulseaudio": {
+      "format": "<span color='#d03e3e'>{icon}</span> {volume}%",
+      "format-muted": "",
+      "tooltip": false,
+      "format-icons": {
+        "headphone": "",
+        "default": ["", "", "󰕾", "󰕾", "󰕾", "", "", ""]
+      },
+      "scroll-step": 1,
+    },
+    "bluetooth": {
+      "format": "<span color='#d03e3e'></span> {status}",
+      "format-disabled": "", // an empty format will hide the module
+      "format-connected": "<span color='#d03e3e'></span> {num_connections}",
+      "tooltip-format": "{device_enumerate}",
+      "tooltip-format-enumerate-connected": "{device_alias}   {device_address}"
+    },
+    "network": {
+      "interface": "wlp3s0",
+      "format": "{ifname}",
+      "format-wifi": "<span color='#d03e3e'> </span>{essid}",
+      "format-ethernet": "{ipaddr}/{cidr} ",
+      "format-disconnected": "<span color='#b4befe'>󰖪 </span>No Network",
+      "tooltip": false,
+    },
+    "battery": {
+      "format": "<span color='#d03e3e'>{icon}</span> {capacity}%",
+      "format-icons": ["", "", "", "", "", "", "", "", "", ""],
+      "format-charging": "<span color='#b4befe'></span> {capacity}%",
+      "tooltip": false,
+    },
+}
