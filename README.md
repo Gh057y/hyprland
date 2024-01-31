@@ -15,7 +15,6 @@ images in background folder not supplied.
 - kitty
 - dunst
 - rofi
-- bemenu
 - bash / scripts
 - grim
 - slurp

@@ -26,8 +26,7 @@ while true; do
 		done \
 		| sort -n | cut -d':' -f2- \
 		| while read -r img; do
-			swww img "$img" --transition-type outer --transition-pos 0.854,0.977 --transition-step ${TRANS}
+			swww img "$img" --transition-type outer --transition-pos 0.854,0.977 --transition-step 90
 			sleep $INTERVAL
-			$TRANS=$(shuf -i 10-100 -n 1)
 		done
 done
