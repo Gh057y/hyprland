@@ -14,6 +14,7 @@ images in background folder not supplied.
 - swww
 - kitty
 - dunst
+- wlogout
 - rofi
 - bash / scripts
 - grim

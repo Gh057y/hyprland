@@ -6,7 +6,7 @@
     "custom/arch": {
       "format": "<span font='12'>blubb</span>",
       "tooltip": false,
-      "on-click": "sh $HOME/.config/rofi/bin/powermenu"
+      "on-click": "wlogout"
     },
     "hyprland/workspaces": {
       "format": "{name}",
